@@ -32,6 +32,17 @@ summary {
     border-radius: 0 0 5px 5px;
 }
 
+@media (max-width: 767px) and (min-width: 480px) {   /* xs для разрешения экрана от 480 до 768 пикселей */
+    .active {
+        padding: 3px 5px 1px 5px;
+    }
+}
+@media (max-width: 479px) {  
+    .active {
+        padding: 3px 5px 1px 5px;
+    }    
+}    
+
 h1{
     color: #90949c;;
 }
@@ -53,14 +64,18 @@ nav {
     background: rgb(255,255,255);
     background: rgba(255, 255, 255, .9);
     z-index: 5;
-	margin: 0 auto;
-	text-align: center;
+    margin: 0 auto;
+    text-align: center;
 }
 
 nav > ul {
 	list-style: none;
 }
 
+nav > ul.right {
+    width: 67px;
+    margin-right: 30px;
+}
 nav > ul li {
     float: left;
 	padding: 1px 15px;
@@ -96,19 +111,27 @@ div.date {
 
 @media (max-width: 1200px)  and (min-width: 992px) { /*lg*/
     nav {
-        width: 1170px;
+        width: 992px;
     }
 }
 
 @media (max-width: 991px)  and (min-width: 768px) { /*md*/
     nav {
-        width: 970px;
+        width: 768px;
     }
+    
 }
 
 @media (max-width: 767px) and (min-width: 480px) {   /* xs для разрешения экрана от 480 до 768 пикселей */
     nav {
-        width: 750px;
+        width: 480px;
+    }
+    nav > ul li {
+	padding: 0;
+    }
+    nav > ul li a,
+    nav > ul li a:hover {
+        padding: 3px 5px 1px 5px;
     }
 }
 @media (max-width: 479px) {  /* для разрешения экрана менее 480 */
@@ -121,7 +144,7 @@ div.date {
     }
     nav > ul li a,
     nav > ul li a:hover{
-        padding: 0;
+        padding: 3px 5px 1px 5px;
     }
 }
 
@@ -187,19 +210,30 @@ div.row {
 }
 
 @media (max-width: 767px) and (min-width: 480px) {   /* xs для разрешения экрана от 480 до 768 пикселей */
-    nav {
+    section {
         padding: 0;
-        margin: 0;
-        width: 100%;
+        width: 450px;
+    }
+    
+    section > ul {
+        width: 98%;
+        margin: 10px 5px;
+        padding: 0;
     }
 }
 @media (max-width: 479px) {  /* для разрешения экрана менее 480 */
 
     section {
         padding: 0;
-        margin: 0;
         width: 100%;
+        padding: 0;
     }   
+    
+    section > ul {
+        width: 98%;
+        margin: 10px 5px;
+        padding: 0;
+    }
 }
 
 img {

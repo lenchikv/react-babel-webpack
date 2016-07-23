@@ -10,7 +10,7 @@ export default class Like extends React.Component {
         };
     }
     componentDidMount() {
-        this.onLoad();  
+        this.onLoad();  ;  
     }
     onLoad() {
         var self = this;
